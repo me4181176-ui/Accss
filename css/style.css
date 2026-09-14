@@ -1209,4 +1209,11 @@ input, select, textarea {
   .announcement-bar {
     font-size: 0.75rem;
   }
+  /* إجبار العناصر على البقاء بجانب بعضها في الموبايل */
+  .products-grid, .features-grid, .container, .row {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto; /* يسمح بالتمرير الأفقي بالجنب لو الشاشة ضيقة */
+  }
 }
