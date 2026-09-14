@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXOR | إكسسوارات ومجوهرات فاخرة نسائية ورجالية</title>
+  
+  <!-- SEO & Social Meta -->
+  <meta name="description" content="NEXOR - تشكيلة فاخرة ومصممة يدويًا من القلائد والخواتم والأساور والساعات الفاخرة للرجال والنساء من الذهب عيار 18 والفضة الإسترليني مع خدمة التغليف المباشر والضمان الملكي.">
+  <meta name="keywords" content="NEXOR, نيكسور, إكسسوارات, مجوهرات, ذهب 18, أساور رجالي, خواتم ألماس, ساعات فاخرة">
+  
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Main Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Announcement Top Bar -->
+  <div class="announcement-bar">
+    <div class="announcement-content" data-i18n="announcement">
+      ✨ شحن مجاني لجميع الطلبات الفاخرة + كارت إهداء ملكي مخصص مجاناً من NEXOR! ✨
+    </div>
+
+    <div class="top-controls">
+      <!-- Color Palette Selector -->
+      <select id="paletteSelect" class="top-select" aria-label="Theme Palette">
+        <option value="nexor">👑 NEXOR Official Gold</option>
+        <option value="rosegold">🌸 Rose Gold</option>
+        <option value="sapphire">💙 Sapphire Silver</option>
+        <option value="monochrome">🖤 Onyx Black</option>
+        <option value="burgundy">🍷 Royal Burgundy</option>
+      </select>
+
+      <!-- Currency Selector -->
+      <select id="currSelect" class="top-select" aria-label="Currency">
+        <option value="EGP">EGP (ج.م)</option>
+        <option value="SAR">SAR (ر.س)</option>
+        <option value="USD">USD ($)</option>
+      </select>
+
+      <!-- Language Selector -->
+      <select id="langSelect" class="top-select" aria-label="Language">
+        <option value="ar">العربية</option>
+        <option value="en">English</option>
+      </select>
+
+      <!-- Theme Toggle -->
+      <button id="themeToggle" class="icon-btn" style="width:28px; height:28px; font-size:0.85rem;" title="Toggle Theme" aria-label="Toggle Theme">
+        <i class="fas fa-sun"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Header Navigation Bar -->
+  <header class="header">
+    <div class="nav-container">
+      <!-- Brand Logo -->
+      <a href="#" class="brand-logo">
+        <img src="assets/images/logo.png" alt="NEXOR Logo" class="brand-logo-img">
+        <div>
+          <span class="brand-name gold-text" data-i18n="brand_name">NEXOR</span>
+          <span class="brand-sub" data-i18n="brand_tagline">Luxury Accessories & Jewelry</span>
+        </div>
+      </a>
+
+      <!-- Navigation Menu -->
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#hero" class="nav-link active" data-i18n="nav_home">الرئيسية</a></li>
+          <li><a href="#catalog" class="nav-link" data-i18n="nav_catalog">المنتجات</a></li>
+          <li><a href="#builder" class="nav-link" data-i18n="nav_builder">صمم طقمك</a></li>
+          <li><a href="#craftsmanship" class="nav-link" data-i18n="nav_story">قصتنا والضمان</a></li>
+          <li><a href="#reviews" class="nav-link" data-i18n="nav_reviews">آراء العملاء</a></li>
+        </ul>
+      </nav>
+
+      <!-- Actions (Search & Cart) -->
+      <div class="nav-actions">
+        <button id="sizeGuideBtn" class="outline-btn" style="padding: 0.4rem 0.9rem; font-size: 0.82rem;" data-i18n="size_guide_btn">
+          📐 حاسبة المقاسات
+        </button>
+
+        <button id="cartBtn" class="icon-btn" aria-label="Cart">
+          <i class="fas fa-shopping-bag"></i>
+          <span id="cartCount" class="badge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Showcase Section -->
+  <section id="hero" class="hero">
+    <div class="hero-container">
+      <div>
+        <div class="hero-tag">
+          <i class="fas fa-crown"></i>
+          <span>تشكيلة الفخامة 2026 • New Fine Collection</span>
+        </div>
+
+        <h1 class="hero-title" data-i18n="hero_title">
+          الفخامة تتجسد في أدق التفاصيل
+        </h1>
+
+        <p class="hero-desc" data-i18n="hero_desc">
+          تشكيلة ساحرة من الإكسسوارات والمجوهرات النسائية والرجالية المصممة يدويًا بأرقى معايير الحرفية العالمية.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#catalog" class="gold-btn" data-i18n="hero_cta">
+            <i class="fas fa-sparkles"></i> تصفح التشكيلة الجديدة
+          </a>
+          <a href="#builder" class="outline-btn" data-i18n="hero_secondary_cta">
+            <i class="fas fa-layer-group"></i> صمم طقمك الخاص
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-image-wrapper">
+        <div class="hero-image-frame">
+          <video id="heroVideo" class="hero-video" autoplay loop muted playsinline poster="assets/images/hero_banner.png">
+            <source src="assets/images/NEXA_jewelry_product_video_produ…_20260913214156.mp4" type="video/mp4">
+          </video>
+          <button id="videoSoundBtn" class="video-control-badge" title="Toggle Sound">
+            <i class="fas fa-volume-mute"></i>
+          </button>
+        </div>
+
+        <div class="hero-float-badge">
+          <i class="fas fa-award float-icon"></i>
+          <div>
+            <h4 style="font-size: 0.95rem; margin-bottom: 0.1rem;" data-i18n="craft_3_title">ضمان الذهبي سنتين</h4>
+            <span style="font-size: 0.75rem; color: var(--text-muted);" data-i18n="craft_1_title">ذهب 18K ومعادن فاخرة</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Catalog Section -->
+  <section id="catalog" class="section">
+    <div class="section-header">
+      <span class="section-subtitle">Catalog & Fine Accessories</span>
+      <h2 class="section-title gold-text">استكشف التشكيلة المتاحة</h2>
+    </div>
+
+    <!-- Search & Filters Control Bar -->
+    <div class="filter-bar">
+      <!-- Category Pills -->
+      <div id="categoryPills" class="category-pills"></div>
+
+      <!-- Filters & Sorting Controls -->
+      <div class="filter-dropdowns">
+        <!-- Live Search Input -->
+        <input type="text" id="searchInput" class="form-input" style="width: 200px; padding: 0.45rem 0.8rem;" placeholder="بحث..." data-i18n="search_placeholder">
+
+        <!-- Gender Filter -->
+        <select id="genderFilter" class="filter-select">
+          <option value="all" data-i18n="filter_all_genders">كل الفئات (النوع)</option>
+          <option value="women" data-i18n="filter_women">نسائي</option>
+          <option value="men" data-i18n="filter_men">رجالي</option>
+        </select>
+
+        <!-- Material Filter -->
+        <select id="materialFilter" class="filter-select">
+          <option value="all" data-i18n="filter_all_materials">جميع الخامات</option>
+          <option value="18k_gold">ذهب عيار 18</option>
+          <option value="sterling_silver">فضة إسترليني 925</option>
+          <option value="diamond">ألماس طبيعي</option>
+          <option value="rose_gold">روز جولد</option>
+          <option value="leather">جلد طبيعي</option>
+        </select>
+
+        <!-- Sort Select -->
+        <select id="sortSelect" class="filter-select">
+          <option value="featured" data-i18n="sort_featured">الأكثر تميزاً</option>
+          <option value="price-low" data-i18n="sort_price_low">السعر: من الأقل للأعلى</option>
+          <option value="price-high" data-i18n="sort_price_high">السعر: من الأعلى للأقل</option>
+          <option value="rating" data-i18n="sort_rating">الأعلى تقييماً</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Dynamic Product Cards Grid -->
+    <div id="productGrid" class="product-grid"></div>
+  </section>
+
+  <!-- Interactive Mix & Match Stack Builder Section -->
+  <section id="builder" class="section">
+    <div class="builder-section">
+      <div class="section-header" style="margin-bottom: 2rem;">
+        <span class="section-subtitle">Customization Studio</span>
+        <h2 class="section-title gold-text" data-i18n="builder_title">أداة تنسيق الأطقم والستايل (Mix & Match)</h2>
+        <p style="color: var(--text-muted); margin-top: 0.5rem;" data-i18n="builder_subtitle">
+          اختاري قطعك المفضلة لبناء طقم مجوهرات مخصص لك وحصلي على خصم 15% فوري!
+        </p>
+      </div>
+
+      <!-- Builder Cards Grid -->
+      <div class="builder-grid">
+        <!-- Necklace Choice -->
+        <div class="builder-card">
+          <h4 data-i18n="select_necklace">اختر القلادة</h4>
+          <img id="previewImgNecklace" src="" alt="Necklace Preview" class="builder-preview-img">
+          <select id="builderNecklaceSelect" class="builder-select"></select>
+        </div>
+
+        <!-- Ring Choice -->
+        <div class="builder-card">
+          <h4 data-i18n="select_ring">اختر الخاتم</h4>
+          <img id="previewImgRing" src="" alt="Ring Preview" class="builder-preview-img">
+          <select id="builderRingSelect" class="builder-select"></select>
+        </div>
+
+        <!-- Bracelet Choice -->
+        <div class="builder-card">
+          <h4 data-i18n="select_bracelet">اختر السوار</h4>
+          <img id="previewImgBracelet" src="" alt="Bracelet Preview" class="builder-preview-img">
+          <select id="builderBraceletSelect" class="builder-select"></select>
+        </div>
+      </div>
+
+      <!-- Builder Summary & Add All -->
+      <div class="builder-summary">
+        <div>
+          <span style="color: var(--text-muted);" data-i18n="builder_total">سعر الطقم المنسق بعد خصم 15%:</span>
+          <div id="builderTotalPrice" class="gold-text" style="font-size: 1.8rem; font-weight: 800;"></div>
+        </div>
+        <button id="builderAddAllBtn" class="gold-btn" data-i18n="builder_add_all">
+          <i class="fas fa-magic"></i> إضافة الطقم كاملاً للسلة (مع خصم 15%)
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Craftsmanship & Royal Heritage Section -->
+  <section id="craftsmanship" class="section">
+    <div class="section-header">
+      <span class="section-subtitle">Heritage & Quality</span>
+      <h2 class="section-title gold-text" data-i18n="craft_title">سر الحرفية والضمان الملكي</h2>
+    </div>
+
+    <div class="craft-grid">
+      <div class="craft-card">
+        <i class="fas fa-gem craft-icon"></i>
+        <h3 style="margin-bottom: 0.5rem;" data-i18n="craft_1_title">ذهب 18K ومعادن فاخرة</h3>
+        <p style="color: var(--text-muted);" data-i18n="craft_1_desc">
+          نستخدم الذهب النقي، الفضة الإسترليني 925، والأونيكس الطبيعي المقاوم للتغير.
+        </p>
+      </div>
+
+      <div class="craft-card">
+        <i class="fas fa-box-open craft-icon"></i>
+        <h3 style="margin-bottom: 0.5rem;" data-i18n="craft_2_title">تغليف الهدايا الفاخر</h3>
+        <p style="color: var(--text-muted);" data-i18n="craft_2_desc">
+          تصلك كل قطعة في علبة مخملية فاخرة مع كارت إهداء ملكي جاهز للتقديم.
+        </p>
+      </div>
+
+      <div class="craft-card">
+        <i class="fas fa-shield-alt craft-icon"></i>
+        <h3 style="margin-bottom: 0.5rem;" data-i18n="craft_3_title">ضمان الذهبي سنتين</h3>
+        <p style="color: var(--text-muted);" data-i18n="craft_3_desc">
+          نضمن لك استبدال أو صيانة القطعة مجاناً خلال سنتين من تاريخ الشراء.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Reviews Section -->
+  <section id="reviews" class="section">
+    <div class="section-header">
+      <span class="section-subtitle">Testimonials</span>
+      <h2 class="section-title gold-text" data-i18n="nav_reviews">آراء العملاء</h2>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-author">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200" alt="سارة الأحمد" class="author-img">
+          <div>
+            <h4 style="font-size: 1rem; margin-bottom: 0.1rem;">سارة الأحمد</h4>
+            <div style="color: var(--gold-primary); font-size: 0.8rem;">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">
+          "التغليف أفخم مما كنت متوقعة! قلادة الزمرد جودتها ممتازة والذهب بيلمع بطريقة ساحرة. وصلني خلال 24 ساعة فقط."
+        </p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-author">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200" alt="أحمد السعيد" class="author-img">
+          <div>
+            <h4 style="font-size: 1rem; margin-bottom: 0.1rem;">مهندس أحمد السعيد</h4>
+            <div style="color: var(--gold-primary); font-size: 0.8rem;">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">
+          "اشتريت سوار الجلد الرجالي وساعة الكرونوغراف. الجودة تضاهي الماركات العالمية والتعامل محترم جداً."
+        </p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-author">
+          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=200" alt="نور الهدى" class="author-img">
+          <div>
+            <h4 style="font-size: 1rem; margin-bottom: 0.1rem;">نور الهدى محمود</h4>
+            <div style="color: var(--gold-primary); font-size: 0.8rem;">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">
+          "طقم الخواتم الذهب والماس رائع جداً، استخدمت أداة التنسيق بالموقع وكانت النتيجة حقيقية ومطابقة تماماً."
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background: var(--bg-secondary); border-top: 1px solid var(--glass-border); padding: 4rem 1.5rem 2rem 1.5rem;">
+    <div style="max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2.5rem;">
+      <div>
+        <div class="brand-logo" style="margin-bottom: 1rem;">
+          <img src="assets/images/logo.png" alt="NEXOR Logo" class="brand-logo-img">
+          <span class="brand-name gold-text" data-i18n="brand_name">NEXOR</span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 1.2rem;" data-i18n="hero_desc">
+          عالم NEXOR للأناقة والمجوهرات الفاخرة التي تلائم الذوق الرفيع.
+        </p>
+      </div>
+
+      <div>
+        <h4 style="margin-bottom: 1rem; color: var(--text-gold);" data-i18n="nav_catalog">المنتجات</h4>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; color: var(--text-muted); font-size: 0.9rem;">
+          <li><a href="#catalog">قلائد وسلاسل</a></li>
+          <li><a href="#catalog">خواتم ومحابس</a></li>
+          <li><a href="#catalog">أساور رجالية ونسائية</a></li>
+          <li><a href="#catalog">ساعات فاخرة</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 style="margin-bottom: 1rem; color: var(--text-gold);">وسائل الدفع المقبولة</h4>
+        <div style="display: flex; gap: 0.8rem; font-size: 1.8rem; color: var(--text-muted);">
+          <i class="fab fa-cc-visa" title="Visa"></i>
+          <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+          <i class="fas fa-mobile-alt" title="Vodafone Cash / Instapay"></i>
+          <i class="fas fa-money-bill-wave" title="Cash on Delivery"></i>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.08); color: var(--text-muted); font-size: 0.85rem;" data-i18n="copyright">
+      جميع الحقوق محفوظة © 2026 LUMIÈRE & CO. الفخامة والتميز.
+    </div>
+  </footer>
+
+  <!-- Slide-Over Shopping Cart Drawer -->
+  <div id="drawerOverlay" class="drawer-overlay"></div>
+  <aside id="cartDrawer" class="cart-drawer">
+    <div class="drawer-header">
+      <h3 data-i18n="cart_title" class="gold-text">حقيبة التسوق</h3>
+      <button id="cartClose" class="icon-btn"><i class="fas fa-times"></i></button>
+    </div>
+
+    <!-- Free Shipping Progress -->
+    <div style="padding: 1rem 1.5rem; background: var(--bg-primary); border-bottom: 1px solid var(--glass-border);">
+      <div id="shippingMsg" style="font-size: 0.82rem; font-weight: 700; color: var(--text-gold);"></div>
+      <div class="shipping-bar-wrap">
+        <div id="shippingProgress" class="shipping-bar-progress"></div>
+      </div>
+    </div>
+
+    <!-- Drawer Body Items -->
+    <div id="cartItems" class="drawer-body"></div>
+
+    <!-- Drawer Footer Totals & Checkout -->
+    <div class="drawer-footer">
+      <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 0.9rem;">
+        <span data-i18n="subtotal">المجموع الفرعي:</span>
+        <span id="cartSubtotal" style="font-weight: 700;"></span>
+      </div>
+      <div style="display: flex; justify-content: space-between; margin-bottom: 1rem; font-size: 0.9rem;">
+        <span data-i18n="shipping">الشحن:</span>
+        <span id="cartShipping" style="font-weight: 700; color: var(--gold-primary);"></span>
+      </div>
+      <div style="display: flex; justify-content: space-between; margin-bottom: 1.2rem; font-size: 1.2rem; font-weight: 800;" class="gold-text">
+        <span data-i18n="total">الإجمالي النهائي:</span>
+        <span id="cartTotal"></span>
+      </div>
+      <button id="checkoutBtn" class="gold-btn" style="width: 100%; justify-content: center;" data-i18n="checkout_btn">
+        إتمام الطلب الآن
+      </button>
+    </div>
+  </aside>
+
+  <!-- Modals Container Overlay -->
+  <div id="modalOverlay" class="modal-overlay">
+    <div id="modalContainer"></div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- JavaScript Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
